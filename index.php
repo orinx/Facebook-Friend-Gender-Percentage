@@ -57,9 +57,9 @@ $facebook = new Facebook($config);
                                 $male_c++;
                             }
                         }
-                        echo '<div class="btn-group col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">';
-                        echo '<a class="btn btn-primary btn-lg">男生' . round($male_c / ($male_c + $female_c)*100) . '%</a>';
-                        echo '<a class="btn btn-danger btn-lg">女生' . round($female_c / ($male_c + $female_c)*100) . '%</a>';
+                        echo '<div class="btn-group col-md-12 col-sm-12 col-xs-12 col-lg-12">';
+                        echo '<a class="btn btn-primary btn-lg" style="width:' . round($male_c / ($male_c + $female_c)*100) . '%;">男生' . round($male_c / ($male_c + $female_c)*100) . '%</a>';
+                        echo '<a class="btn btn-danger btn-lg" style="width:' . round($female_c / ($male_c + $female_c)*100) . '%;">女生' . round($female_c / ($male_c + $female_c)*100) . '%</a>';
                         echo '</div>';
                     }
                 ?>

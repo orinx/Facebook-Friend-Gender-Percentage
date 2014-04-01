@@ -13,6 +13,7 @@ $facebook = new Facebook($config);
 <head>
     <meta charset="UTF-8">
     <title>看看你的好友性別比例！</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap.css">
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -26,7 +27,7 @@ $facebook = new Facebook($config);
     </script>
 </head>
 <body>
-    <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12" style="margin-top:100px;">
+    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 col-lg-6 col-lg-offset-3" style="margin-top:100px;">
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h4 class="text-center">看看你的好友性別比例！</h4>
@@ -67,10 +68,18 @@ $facebook = new Facebook($config);
             </div>
             <div class="panel-footer">
                 <div class="text-center">
-                    <a href="https://www.facebook.com/ntust.coding" target="_blank">台科大程式設計研究社</a>。<a href="http://me.coder.tw" target="_blank">林熙哲</a>
+                    <a href="https://www.facebook.com/ntust.coding" target="_blank">台科大程式設計研究社</a>。<a href="http://me.coder.tw" target="_blank">林熙哲</a>。<div class="fb-share-button" data-href="http://gender.coder.tw/" data-type="button_count"></div>
                 </div>
             </div>
         </div>
     </div>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=762313083780973";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>
